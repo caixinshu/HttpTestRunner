@@ -1,5 +1,11 @@
 # HttpTestRunner
 # coding: utf-8
+import sys
+default_encoding = 'utf-8'
+if sys.getdefaultencoding() != default_encoding:
+    reload(sys)
+    sys.setdefaultencoding(default_encoding)
+'''这一坨我也不知道什么意思，但是解决ASCII  code can't decode byte 0xe9 in position 5627: ordinal not in range(128)'''
 import unittest
 import HTMLTestRunner
 from selenium import webdriver
