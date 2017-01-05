@@ -28,7 +28,9 @@ class Baidu(unittest.TestCase):
         cls.driver.quit()
 if __name__=='__main__':
     suite=unittest.TestSuite()
-    suite.addTest(Baidu('test_001'))
+    '''每一个test需要写，也可以嵌套'''
+    suite.addTest(Baidu('test_001'))
+    suite.addTest(Baidu('test_002'))
     filename="C:\Users\XM\PycharmProjects\untitled3\\test\\result.html"
     fp=file(filename,'wb')
     runner=HTMLTestRunner.HTMLTestRunner(stream=fp,title='Result',description='Test_report')
